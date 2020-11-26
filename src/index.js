@@ -12,17 +12,17 @@ db.connect()
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(morgan('combined'))
-app.use(express.urlencoded({deprecated: true}))
+// app.use(express.urlencoded({deprecated: true}))
 app.use(express.json())
 
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
-app.set('views', path.join(__dirname, 'resources\\views'));
+app.set('views', path.join(__dirname, 'resources','views'));
 console.log('__dirname',__dirname);
 
 
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })

@@ -4,8 +4,8 @@ async function connect(){
     await mongoose.connect('mongodb://localhost/f8_education_dev', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useFindAndModify: false,
-        useCreateIndex: true
+        // useFindAndModify: false,
+        // useCreateIndex: true
       });
       console.log('connect success')
   } catch(error){
