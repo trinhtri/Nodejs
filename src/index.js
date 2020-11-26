@@ -5,10 +5,10 @@ const exphbs  = require('express-handlebars');
 const app = express()
 const port = 3000
 const route = require('./routes')
-
+const db = require('./config/db/index')
 // init route
 route(app)
-
+db.connect()
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(morgan('combined'))
