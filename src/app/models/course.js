@@ -8,7 +8,7 @@ const course = new Schema({
   discription:{ type: String , maxlength: 256},
   image:{ type: String , maxlength: 256},
   createdAt:{ type: Date , default: Date.now},
-  UpdateAt:{ type: Date , default: Date.now},
+  updateAt:{ type: Date , default: Date.now},
 });
 
 
